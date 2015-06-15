@@ -1,0 +1,24 @@
+{
+  "name": "superagent-django-csrf",
+  "version": "0.1.0",
+  "description": "Patch to add `csrftoken` from cookies as `X-CSRFToken` header to every superagent's request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rambler-digital-solutions/superagent-django-csrf.git"
+  },
+  "keywords": [
+    "CSRF",
+    "django",
+    "superagent"
+  ],
+  "author": "Anton <anton@shuvalov.info> (http://shuvalov.info/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rambler-digital-solutions/superagent-django-csrf/issues"
+  },
+  "homepage": "https://github.com/rambler-digital-solutions/superagent-django-csrf"
+}
