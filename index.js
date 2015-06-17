@@ -1,6 +1,6 @@
 'use strict';
 
-require('superagent');
+var request = require('superagent');
 
 // patch superagent to attach CSRF-token to all requests
 var csrf = document.cookie.match(/csrftoken=(.*?)(?:$|;)/)[1];
