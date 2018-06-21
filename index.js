@@ -6,8 +6,14 @@ var request = require('superagent');
 try {
   var csrf = document.cookie.match(/csrftoken=(.*?)(?:$|;)/)[1];
   var end = request.Request.prototype.end;
+  request.Request.prototype.disableDjangoCsrf = function() {
+    this._djangoCsrf = false;
+    return this;
+  };
   request.Request.prototype.end = function(fn) {
-    this.set('X-CSRFToken', csrf);
+    if (this._djangoCsrf !== false){
+      this.set('X-CSRFToken', csrf);
+    }
     return end.call(this, fn);
   };
 }
